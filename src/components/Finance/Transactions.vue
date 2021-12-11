@@ -32,19 +32,43 @@ export default {
                 },
                 {
                     id: 2,
-                    color: "red",
-                    symbol: "-",
-                    amount: 540,
-                    date: "01/09/2021",
+                    color: "green",
+                    symbol: "+",
+                    amount: 350,
+                    date: "14/08/2021",
                     time: "13:40"
                 },
                 {
                     id: 3,
+                    color: "red",
+                    symbol: "-",
+                    amount: 540,
+                    date: "01/09/2021",
+                    time: "22:32"
+                },
+                {
+                    id: 4,
+                    color: "red",
+                    symbol: "-",
+                    amount: 540,
+                    date: "01/09/2021",
+                    time: "22:32"
+                },
+                {
+                    id: 5,
+                    color: "red",
+                    symbol: "-",
+                    amount: 140,
+                    date: "04/09/2021",
+                    time: "20:32"
+                },
+                {
+                    id: 6,
                     color: "green",
                     symbol: "+",
-                    amount: 600,
-                    date: "25/09/2021",
-                    time: "22:32"
+                    amount: 5440,
+                    date: "14/09/2021",
+                    time: "00:32"
                 },
             ]
         }
