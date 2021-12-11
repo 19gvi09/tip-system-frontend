@@ -1,0 +1,36 @@
+/* Basic null variables */
+$padding-x: null;
+$gutter: null;
+$total-cols: null;
+$cols: null;
+
+/* Color variables */
+$purple1: #562CD3;
+$purple2: #B8B8F6;
+$black: #0D0D0D;
+$grey: #333333;
+$white1: #FFFFFF;
+$white2: #F9F9FC;
+$grey1: #E6E6E6;
+$grey2: #808080;
+$purple_dark1: #341A7F;
+$purple_dark2: #300943;
+$red1: #FF3333;
+$green1: #0D9900;
+$radial: radial-gradient(98.89% 173.8% at 5.07% 16.39%, #E0E4FB 0%, #AAA3F5 100%);
+$linear: linear-gradient(180deg, #F9F9FC -2.41%, #FFFFFF 100%);
+
+/* Shadow variables */
+$sh_btn: 10px 10px 30px rgba(0, 0, 0, 0.2);
+$sh_btn-hover: 10px 10px 30px rgba(0, 0, 0, 0.3);
+$sh_arrow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+$sh_white: 5px 5px 10px rgba(255, 255, 255, 0.25);
+$sh_top: -10px -10px 30px rgba(0, 0, 0, 0.02);
+$sh_light: 5px 5px 30px rgba(0, 0, 0, 0.02);
+$sh_bottom: -10px 10px 30px rgba(0, 0, 0, 0.02);
+
+/* Breakpoints */
+$breakpoints: (
+    "xs": 375px,
+    "md": 1440px,
+);

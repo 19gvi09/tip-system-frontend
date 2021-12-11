@@ -1,14 +1,18 @@
 <template>
     <div>
-        Home
+        LK
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Home',
+    name: "LK",
     components: {
         
     }
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>
