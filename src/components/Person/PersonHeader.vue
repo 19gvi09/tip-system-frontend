@@ -53,6 +53,7 @@ export default {
 .main_background {
     display: block;
     flex-direction: column;
+        height: 281px;
 
     /* sh2_arrow */
 
