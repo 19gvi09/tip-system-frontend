@@ -1,12 +1,12 @@
 <template>
-<div class="wrapper">
-    <h1>Частые вопросы</h1>
+    <div class="wrapper">
+    <h1>QR - код и ссылка</h1>
 </div>
 </template>
 
 <script>
 export default {
-    name: "FaqHeader"
+    name: "QrHead"
 }
 </script>
 
