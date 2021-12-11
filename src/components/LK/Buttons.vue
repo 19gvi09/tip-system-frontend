@@ -43,6 +43,7 @@ export default {
     outline: none;
     border: none;
     background: transparent;
+    cursor: pointer;
 
     &.purple {
         color: $white1;
