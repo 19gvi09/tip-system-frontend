@@ -11,9 +11,6 @@
         <img src="../../assets/QR.png" alt="">
     </div>
 </div>
-
-
-
 </template>
 
 <script>
@@ -73,13 +70,4 @@ export default {
     color: #562CD3;
 }
 
-.wrapper2 {
-    .or {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        text-align: center;
-    }
-}
 </style>

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: "QrHead"
+    name: "AllQrHead"
 }
 </script>
 
