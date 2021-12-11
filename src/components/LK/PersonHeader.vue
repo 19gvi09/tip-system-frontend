@@ -35,19 +35,19 @@ export default {
     $total-cols: 3 !global;
 }
 
+.wrapper {
+    padding: 20px $padding-x;
+    display: flex;
+    align-items: center;
+    background: $radial;
+    box-shadow: $sh_arrow;
+}
+
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-}
-
-.wrapper {
-    padding: 20px $padding-x;
-    display: flex;
-    align-items: center;
-    background: radial-gradient(98.89% 173.8% at 5.07% 16.39%, #E0E4FB 0%, #AAA3F5 100%);
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .main_background {
