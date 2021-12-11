@@ -2,8 +2,8 @@
     <div class="wrapper">
         <div class="row">
             <div class="logo">
-                <div class="logo__img"></div>
-                <h1 class="logo__title">Forta</h1>
+                <div class="logo__img" @click="this.$router.push('/')"></div>
+                <h1 class="logo__title" @click="this.$router.push('/')">Forta</h1>
             </div>
             <div class="burger">
                 <div class="burger__line"></div>
@@ -54,6 +54,7 @@ export default {
         height: 30px;
         border-radius: 10px;
         background: $purple1;
+        cursor: pointer;
     }
 
     &__title {
@@ -61,20 +62,7 @@ export default {
         color: $grey;
         font-size: 28px;
         line-height: 30px;
-    }
-
-    @include respond-to("xs") {
-        $padding-x: 25px;
-        $gutter: 20px;
-        $total-cols: 3;
-        width: calc((100vw - 2 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
-    }
-
-    @include respond-to("md") {
-        $padding-x: 60px;
-        $gutter: 20px;
-        $total-cols: 3;
-        width: calc((100vw - 2 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
+        cursor: pointer;
     }
 }
 

@@ -6,16 +6,19 @@
             <router-link to="/lk">LK</router-link>
         </div> -->
         <router-view/>
+        <Footer />
     </div>
 </template>
 
 <script>
+import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 
 export default {
     name: "App",
     components: {
         Header,
+        Footer,
     }
 }
 </script>
@@ -26,6 +29,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: $purple4;
+  background: $purple3;
 }
 </style>

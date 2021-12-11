@@ -1,9 +1,9 @@
 <template>
-<div>
-<FinHeader />
-<Balance class="balance" />
-<Transactions class="transactions" />
-</div>
+    <div>
+        <FinHeader />
+        <Balance class="balance" />
+        <Transactions class="transactions" />
+    </div>
 </template>
 
 <script>

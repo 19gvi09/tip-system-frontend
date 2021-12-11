@@ -71,6 +71,10 @@ export default {
     border-radius: 20px;
     box-shadow: $sh_arrow;
     padding: 9px 20px;
+    
+    >.row {
+        cursor: pointer;
+    }
 }
 
 .row {
@@ -87,6 +91,7 @@ export default {
 }
 
 .content {
+    
     .row {
         justify-content: flex-start;
     }
@@ -117,6 +122,7 @@ export default {
 
 .hidden {
     display: none;
+    transition: all 1s ease-in-out;
 }
 
 .reverse {
