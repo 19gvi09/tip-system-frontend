@@ -94,6 +94,7 @@ export default {
     font-size: 18px;
     line-height: 22px;
     margin-top:-21px;
+    padding-bottom: 17px;
 }
 
 .row {
