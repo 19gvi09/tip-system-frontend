@@ -8,7 +8,7 @@ $cols: null;
 $purple1: #562CD3;
 $purple2: #B8B8F6;
 $purple4: #E0E4FA;
-$black: #0D0D0D;
+//$black: #0D0D0D;
 $grey: #333333;
 $white1: #FFFFFF;
 $white2: #F9F9FC;
@@ -29,6 +29,7 @@ $sh_white: 5px 5px 10px rgba(255, 255, 255, 0.25);
 $sh_top: -10px -10px 30px rgba(0, 0, 0, 0.02);
 $sh_light: 5px 5px 30px rgba(0, 0, 0, 0.02);
 $sh_bottom: -10px 10px 30px rgba(0, 0, 0, 0.02);
+$sh_purple: -10px -10px 30px rgba(86, 44, 211, 0.05), 10px 10px 30px rgba(86, 44, 211, 0.05);
 
 /* Breakpoints */
 $breakpoints: (

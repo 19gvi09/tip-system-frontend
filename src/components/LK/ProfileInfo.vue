@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="block">
             <div class="row" @click="isOpen = !isOpen">
-                <h3 class="title">Информация о профиле</h3>
+                <h4 class="title">Информация о профиле</h4>
                 <img :class="{reverse: isOpen}" src="../../assets/arrow-sm.svg" alt="arrow">
             </div>
             <div class="content" :class="{hidden: !isOpen}">
@@ -50,7 +50,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
     @include respond-to("xs") {
-        $padding-x: 25px;
+        $padding-x: 6.5vw;
         $gutter: 20px;
         $total-cols: 3;
         padding: 0 $padding-x;

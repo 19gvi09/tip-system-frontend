@@ -26,7 +26,7 @@ export default {
     background: $white1;
 
     @include respond-to("xs") {
-        $padding-x: 25px;
+        $padding-x: 6.5vw;
         $gutter: 20px;
         $total-cols: 3;
         padding: 20px $padding-x;
@@ -58,7 +58,7 @@ export default {
 
     &__title {
         margin: 0 0 0 10px;
-        color: $black;
+        color: $grey;
         font-size: 28px;
         line-height: 30px;
     }
@@ -86,7 +86,7 @@ export default {
         width: 30px;
         height: 2px;
         border-radius: 5px;
-        background: $black;
+        background: $grey;
 
         &:last-child {
             margin: 0;

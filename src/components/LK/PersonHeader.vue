@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
     @include respond-to("xs") {
-        $padding-x: 25px;
+        $padding-x: 6.5vw;
         $gutter: 20px;
         $total-cols: 3;
         padding: 30px $padding-x 141px;
@@ -68,81 +68,6 @@ export default {
         span {
             font-weight: 700;
         }
-    }
-}
-
-.user-name {
-    font-style: normal;
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 43px;
-    color: $white1;
-
-    @include respond-to("xs") {
-        $padding-x: 25px;
-        $gutter: 20px;
-        $total-cols: 3;
-        width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
-    }
-
-    @include respond-to("md") {
-        $padding-x: 30px;
-        $gutter: 20px;
-        $total-cols: 3;
-        width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
-    }
-}
-
-.greetings {
-    text-align: left;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    color: $white1;
-
-    @include respond-to("xs") {
-        $padding-x: 25px;
-        $gutter: 20px;
-        $total-cols: 3;
-        width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
-    }
-
-    @include respond-to("md") {
-        $padding-x: 30px;
-        $gutter: 20px;
-        $total-cols: 3;
-        width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
-    }
-}
-
-.user-id {
-    p {
-        font-family: Lato, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        color: #FFFFFF;
-
-    }
-
-    b {
-        font-family: Lato, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 19px;
-        color: #FFFFFF;
-    }
-
-    span {
-        font-family: Lato, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        color: #FFFFFF;
     }
 }
 </style>

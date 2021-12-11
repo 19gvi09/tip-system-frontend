@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
     @include respond-to("xs") {
-        $padding-x: 25px;
+        $padding-x: 6.5vw;
         $gutter: 20px;
         $total-cols: 3;
         padding: 0 $padding-x;
@@ -39,7 +39,7 @@ export default {
         padding: 0 $padding-x;
     }
 
-    color: $black;
+    color: $grey;
 }
 
 .block {
@@ -53,10 +53,16 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 31px;
+    padding: 15px 0;
+    border-bottom: 1px solid $grey1;
+
+    &:first-child {
+        padding: 0 0 15px;
+    }
 
     &:last-child {
-        margin: 0;
+        padding: 15px 0 0;
+        border: none;
     }
 }
 
