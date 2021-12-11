@@ -10,7 +10,7 @@
 
 <script>
 import PersonHeader from '../components/LK/PersonHeader.vue'
-import Balance from '../components/LK/Balance.vue'
+import Balance from '../components/Balance.vue'
 import ProfileInfo from '../components/LK/ProfileInfo.vue'
 import History from '../components/LK/History.vue'
 import Buttons from '../components/LK/Buttons.vue'

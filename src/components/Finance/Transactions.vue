@@ -4,47 +4,12 @@
         <div class="row2">
             <p>Финансовые операции</p>
         </div>
-        <div class="row">
-            <h3 class="text"><img src="../../assets/Vector6.png" alt="" class="image">
-                +350 ₽</h3>
-            <h3 class="amount">14/08/2021</h3>
-        </div>
-        <div class="row">
-            <h3 class="text"><img src="../../assets/Vector6.png" alt="" class="image">
-                +350 ₽</h3>
-            <h3 class="amount">14/08/2021</h3>
-        </div>
-        <div class="row">
-            <h3 class="text"><img src="../../assets/Vector-down.png" alt="" class="image">-540</h3>
-            <h3 class="amount">01/09/2021</h3>
-        </div>
-        <div class="row">
-            <h3 class="text"><img src="../../assets/Vector-down.png" alt="" class="image">-540</h3>
-            <h3 class="amount">01/09/2021</h3>
-        </div>
-         <div class="row">
-            <h3 class="text"><img src="../../assets/Vector6.png" alt="" class="image">+600</h3>
-            <h3 class="amount">25/09/2021</h3>
-        </div>
-        <div class="row">
-            <h3 class="text"><img src="../../assets/Vector6.png" alt="" class="image">+350</h3>
-            <h3 class="amount">14/08/2021</h3>
-        </div>
-         <div class="row">
-            <h3 class="text"><img src="../../assets/Vector6.png" alt="" class="image">+350</h3>
-            <h3 class="amount">14/08/2021</h3>
-        </div>
-        <div class="row">
-            <h3 class="text"><img src="../../assets/Vector-down.png" alt="" class="image">-540</h3>
-            <h3 class="amount">01/09/2021</h3>
-        </div>
-        <div class="row">
-            <h3 class="text"><img src="../../assets/Vector-down.png" alt="" class="image">-540</h3>
-            <h3 class="amount">01/09/2021</h3>
-        </div>
-        <div class="row">
-            <h3 class="text"><img src="../../assets/Vector6.png" alt="" class="image">+600</h3>
-            <h3 class="amount">25/09/2021</h3>
+        <div class="row" v-for="item in history" :key="item.id">
+            <div class="row">
+                <img :src="require('../../assets/arrow-' + item.color + '.svg')" alt="arrow">
+                <p class="amount">{{ item.symbol + item.amount }} ₽</p>
+            </div>
+            <p class="date"><span class="time">{{ item.time }}</span>{{ item.date }}</p>
         </div>
     </div>
 </div>
@@ -52,7 +17,38 @@
 
 <script>
 export default {
-    name: "Transactions"
+    name: "Transactions",
+    data() {
+        return {
+            // По аналогии добавляешь в массив объекты с данными
+            history: [
+                {
+                    id: 1,
+                    color: "green",
+                    symbol: "+",
+                    amount: 350,
+                    date: "14/08/2021",
+                    time: "11:20"
+                },
+                {
+                    id: 2,
+                    color: "red",
+                    symbol: "-",
+                    amount: 540,
+                    date: "01/09/2021",
+                    time: "13:40"
+                },
+                {
+                    id: 3,
+                    color: "green",
+                    symbol: "+",
+                    amount: 600,
+                    date: "25/09/2021",
+                    time: "22:32"
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -76,7 +72,7 @@ export default {
         padding: 0 $padding-x;
     }
 
-    color: $black;
+    color: $grey;
 }
 
 .block {
@@ -88,7 +84,6 @@ export default {
 
 .row2 {
     text-align: left;
-    font-family: Lato, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -108,28 +103,22 @@ export default {
     }
 }
 
-.text {
-    margin: 0;
-    font-family: Lato, sans-serif;
-    font-style: normal;
-    font-weight: normal;
+.amount {
+    margin: 0 0 0 10px;
     font-size: 16px;
+    font-weight: 400;
     line-height: 19px;
-    display: flex;
-    align-items: center;
 }
 
-.amount {
-    margin: 0;
-    font-family: Lato, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+.date {
+    margin: 15px 0;
     font-size: 16px;
-    line-height: 150%;
-    /* or 24px */
+    font-weight: 400;
 
-    display: flex;
-    align-items: center;
-    text-align: right;
+    .time {
+        color: $grey2;
+        margin: 0 7px 0 0;
+        font-weight: 300;
+    }
 }
 </style>
