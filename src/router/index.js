@@ -14,7 +14,15 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "lk" */ '../views/LK.vue')
-  }
+  },
+  {
+    path: '/finance',
+    name: 'Finance',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "finance" */ '../views/Finance.vue')
+  },
 ]
 
 const router = createRouter({
