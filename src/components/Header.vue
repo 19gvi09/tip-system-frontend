@@ -21,21 +21,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@include respond-to("xs") {
-    $padding-x: 25px !global;
-    $gutter: 20px !global;
-    $total-cols: 3 !global;
-}
-
-@include respond-to("md") {
-    $padding-x: 60px !global;
-    $gutter: 20px !global;
-    $total-cols: 3 !global;
-}
-
 .wrapper {
-    padding: 20px $padding-x;
     box-shadow: $sh_light;
+
+    @include respond-to("xs") {
+        $padding-x: 25px;
+        $gutter: 20px;
+        $total-cols: 3;
+        padding: 20px $padding-x;
+    }
+
+    @include respond-to("md") {
+        $padding-x: 60px;
+        $gutter: 20px;
+        $total-cols: 3;
+        padding: 20px $padding-x;
+    }
 }
 
 .row {
@@ -46,7 +47,6 @@ export default {
 
 .logo {
     display: flex;
-    width: calc((100vw - 2 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
 
     &__img {
         width: 30px;
@@ -60,6 +60,20 @@ export default {
         color: $black;
         font-size: 28px;
         line-height: 30px;
+    }
+
+    @include respond-to("xs") {
+        $padding-x: 25px;
+        $gutter: 20px;
+        $total-cols: 3;
+        width: calc((100vw - 2 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
+    }
+
+    @include respond-to("md") {
+        $padding-x: 60px;
+        $gutter: 20px;
+        $total-cols: 3;
+        width: calc((100vw - 2 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
     }
 }
 
