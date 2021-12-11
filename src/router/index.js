@@ -45,7 +45,15 @@ const routes = [
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
-  component: () => import(/* webpackChunkName: "qr" */ '../views/AllQr.vue')
+  component: () => import(/* webpackChunkName: "Allqr" */ '../views/AllQr.vue')
+},
+{
+  path: '/documents',
+  name: 'Documents',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "documents" */ '../views/Documents.vue')
 }
 ]
 
