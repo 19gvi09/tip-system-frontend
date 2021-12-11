@@ -1,19 +1,13 @@
 <template>
-<div class="wrapper">
-    <div class="row">
-        <div class="main_background">
-            <div class="greetings">
-                <p>Привет,</p>
-            </div>
-            <div class="user-name">
-                <p>Иван Ковальников</p>
-            </div>
-            <div class="user-id">
-                <p><span>Твой</span> <b>Forta id:</b> 7685 7588 4758</p>
+    <div class="wrapper">
+        <div class="row">
+            <div class="text">
+                <h4 class="text__ave">Привет,</h4>
+                <h2 class="text__name">Иван Ковальников</h2>
+                <h5 class="text__id">Твой <span>Forta id:</span> 7685 7588 4758</h5>
             </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
@@ -23,65 +17,103 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@include respond-to("xs") {
-    $padding-x: 25px !global;
-    $gutter: 20px !global;
-    $total-cols: 3 !global;
-}
-
-@include respond-to("md") {
-    $padding-x: 30px !global;
-    $gutter: 20px !global;
-    $total-cols: 3 !global;
-}
-
 .wrapper {
-    padding: 20px $padding-x;
-    display: flex;
-    align-items: center;
+    @include respond-to("xs") {
+        $padding-x: 25px;
+        $gutter: 20px;
+        $total-cols: 3;
+        padding: 30px $padding-x 141px;
+    }
+
+    @include respond-to("md") {
+        $padding-x: 30px;
+        $gutter: 20px;
+        $total-cols: 3;
+        padding: 30px $padding-x 141px;
+    }
+
     background: $radial;
     box-shadow: $sh_arrow;
+    color: $white1;
 }
 
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
-.main_background {
-    display: block;
-    flex-direction: column;
-        height: 281px;
+.text {
+    text-align: left;
 
-    /* sh2_arrow */
+    &__ave {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+    }
 
+    &__name {
+        margin: 10px 0;
+        font-size: 34px;
+        line-height: 50px;
+    }
+
+    &__id {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+
+        span {
+            font-weight: 700;
+        }
+    }
 }
 
 .user-name {
-    width: calc((100vw - 3 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
-    font-family: Lato, sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 36px;
     line-height: 43px;
+    color: $white1;
 
-    /* DiForta_style/white1 */
+    @include respond-to("xs") {
+        $padding-x: 25px;
+        $gutter: 20px;
+        $total-cols: 3;
+        width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
+    }
 
-    color: #FFFFFF;
-
+    @include respond-to("md") {
+        $padding-x: 30px;
+        $gutter: 20px;
+        $total-cols: 3;
+        width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
+    }
 }
 
 .greetings {
     text-align: left;
-    width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
-    font-family: Lato, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-    color: #FFFFFF;
+    color: $white1;
+
+    @include respond-to("xs") {
+        $padding-x: 25px;
+        $gutter: 20px;
+        $total-cols: 3;
+        width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
+    }
+
+    @include respond-to("md") {
+        $padding-x: 30px;
+        $gutter: 20px;
+        $total-cols: 3;
+        width: calc((100vw - 1 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
+    }
 }
 
 .user-id {

@@ -23,6 +23,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
     box-shadow: $sh_light;
+    background: $white1;
 
     @include respond-to("xs") {
         $padding-x: 25px;

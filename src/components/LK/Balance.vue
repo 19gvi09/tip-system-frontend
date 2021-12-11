@@ -1,31 +1,20 @@
 <template>
-<!-- <div class="wrapper">
-    <div class="row">
-        
-    </div>
-</div> -->
-
-<div class="main_balance">
-            <div class="balance">
-                <p>Баланс</p>
-                <div class="value">
-                    <p>1000Р</p>
-                </div>
+    <div class="wrapper">
+        <div class="block">
+            <div class="row">
+                <h3 class="text">Баланс</h3>
+                <h3 class="amount">1000 ₽</h3>
             </div>
-            <div class="earned">
-                <p>Заработано</p>
-                <div class="value1">
-                    <p>1950Р</p>
-                </div>
+            <div class="row">
+                <h3 class="text">Заработано</h3>
+                <h3 class="amount">1950 ₽</h3>
             </div>
-             <div class="withdrawn">
-                <p>Выведено</p>
-                <div class="value2">
-                    <p>1950Р</p>
-                </div>
+            <div class="row">
+                <h3 class="text">Выведено</h3>
+                <h3 class="amount">950 ₽</h3>
             </div>
         </div>
-
+    </div>
 </template>
 
 <script>
@@ -35,97 +24,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@include respond-to("xs") {
-    $padding-x: 25px !global;
-    $gutter: 20px !global;
-    $total-cols: 3 !global;
+.wrapper {
+    @include respond-to("xs") {
+        $padding-x: 25px;
+        $gutter: 20px;
+        $total-cols: 3;
+        padding: 0 $padding-x;
+    }
+
+    @include respond-to("md") {
+        $padding-x: 30px;
+        $gutter: 20px;
+        $total-cols: 3;
+        padding: 0 $padding-x;
+    }
+
+    color: $black;
 }
 
-@include respond-to("md") {
-    $padding-x: 30px !global;
-    $gutter: 20px !global;
-    $total-cols: 3 !global;
-}
-
-.main_balance {
-    display: flex;
-    padding: 23px $padding-x;
-    justify-content: space-between;
-    flex-direction: column;
-    width: calc((100vw - 3 * $padding-x + $gutter) / $total-cols * 2 - $gutter);
-    margin: -65px auto;
-    background-color: #F5F5FA;
+.block {
+    padding: 25px 20px;
+    background: $white1;
+    box-shadow: $sh_arrow;
     border-radius: 20px;
+}
 
-    .balance {
-        font-family: Lato, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 19px;
-        color: #0D0D0D;
-        display: flex;
-        justify-content: space-between;
-        width: 98%;
-    }
-       .earned {
-        font-family: Lato, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 19px;
-        color: #0D0D0D;
-        display: flex;
-        justify-content: space-between;
-        width: 98%;
-    }
-     .withdrawn {
-        font-family: Lato, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 19px;
-        color: #0D0D0D;
-        display: flex;
-        justify-content: space-between;
-        width: 98%;
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 31px;
+
+    &:last-child {
+        margin: 0;
     }
 }
 
-.value {
-    font-family: Lato, sans-serif;
-    font-style: normal;
-    font-weight: normal;
+.text {
+    margin: 0;
     font-size: 16px;
     line-height: 19px;
-    color: #0D0D0D;
 }
 
-.value1 {
-    font-family: Lato, sans-serif;
-    font-style: normal;
-    font-weight: normal;
+.amount {
+    margin: 0;
     font-size: 16px;
+    font-weight: 400;
     line-height: 19px;
-    color: #0D0D0D;
 }
-
-.value2 {
-    font-family: Lato, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #0D0D0D;
-}
-// .wrapper {
-//     padding: 20px $padding-x;
-//     box-shadow: $sh_light;
-// }
-
-// .row {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-// }
 </style>
