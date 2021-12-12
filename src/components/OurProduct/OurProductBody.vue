@@ -42,7 +42,9 @@ export default {
     }
 
 }
-
+  .row:last-child {
+        border-bottom: none;
+    }
 .row {
     display: flex;
     align-items: center;
@@ -54,7 +56,7 @@ export default {
         margin: 0;
     }
 
-    li:last-child {
+    .row:last-child {
 
         border-bottom: none;
     }

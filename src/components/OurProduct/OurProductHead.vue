@@ -1,6 +1,6 @@
 <template>
 <div class="wrapper">
-    <h1>Документация</h1>
+    <h1>Наша продукция</h1>
 </div>
 </template>
 
