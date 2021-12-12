@@ -54,7 +54,7 @@ export default {
     }
 
     &.heading {
-        background: url('../assets/qr-header.png'), $radial;
+        background: $radial;
         box-shadow: $sh_arrow;
         color: $white1;
 

@@ -18,35 +18,33 @@ const routes = [
     {
         path: '/finance',
         name: 'Finance',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "finance" */ '../views/Finance.vue')
     },
     {
         path: '/faq',
         name: 'Faq',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "faq" */ '../views/Faq.vue')
     },
     {
         path: '/qr',
         name: 'qr',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "qr" */ '../views/QR.vue')
     },
     {
         path: '/qr/:id',
         name: 'Code',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "code" */ '../views/Code.vue')
-    }
+    },
+    {
+        path: '/auth',
+        name: 'Auth',
+        component: () => import(/* webpackChunkName: "code" */ '../views/Form.vue')
+    },
+    {
+        path: '/register/:type',
+        name: 'Register',
+        component: () => import(/* webpackChunkName: "code" */ '../views/Form.vue')
+    },
 ]
 
 const router = createRouter({
