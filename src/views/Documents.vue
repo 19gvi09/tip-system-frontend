@@ -1,6 +1,8 @@
 <template>
-<DocHead />
-<DocBody />
+    <div>
+        <DocHead />
+        <DocBody />
+    </div>
 </template>
 
 <script>

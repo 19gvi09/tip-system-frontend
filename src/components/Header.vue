@@ -1,17 +1,37 @@
 <template>
-    <div class="wrapper">
-        <div class="row">
-            <div class="logo">
-                <div class="logo__img" @click="this.$router.push('/')"></div>
-                <h1 class="logo__title" @click="this.$router.push('/')">Forta</h1>
-            </div>
+    <div>
+        <div class="wrapper">
             <div class="row">
-                <div class="burger">
-                    <div class="burger__line"></div>
-                    <div class="burger__line"></div>
-                    <div class="burger__line"></div>
+                <div class="logo">
+                    <div class="logo__img" @click="this.$router.push('/')"></div>
+                    <h1 class="logo__title" @click="this.$router.push('/')">Forta</h1>
                 </div>
-                <img class="profile" src="../assets/profile.svg" alt="">
+                <div class="row">
+                    <div class="burger" @click="Menu">
+                        <div class="burger__line"></div>
+                        <div class="burger__line"></div>
+                        <div class="burger__line"></div>
+                    </div>
+                    <img class="profile" src="../assets/profile.svg" @click="Profile" alt="profile">
+                </div>
+            </div>
+        </div>
+        <div class="dropdown" v-if="menu">
+            <div class="menu">
+                <div class="links">
+                    <router-link class="links__link" to="/documents">Документация</router-link>
+                    <router-link class="links__link" to="/products">Наши продукты</router-link>
+                    <router-link class="links__link" to="/faq">FAQ</router-link>
+                    <router-link class="links__link" to="/documents">Служба поддержки</router-link>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown" v-if="profile">
+            <div class="menu">
+                <div class="links">
+                    <button class="links__link">Выйти</button>
+                    <button class="links__link">Удалить профиль</button>
+                </div>
             </div>
         </div>
     </div>
@@ -19,7 +39,23 @@
 
 <script>
 export default {
-    name: "Header"
+    name: "Header",
+    data() {
+        return {
+            menu: false,
+            profile: false,
+        }
+    },
+    methods: {
+        Menu() {
+            this.profile = false
+            this.menu = !this.menu
+        },
+        Profile() {
+            this.menu = false
+            this.profile = !this.profile
+        }
+    }
 }
 </script>
 
@@ -30,15 +66,6 @@ export default {
 
     @include respond-to("xs") {
         $padding-x: 6.5vw;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 20px $padding-x;
-    }
-
-    @include respond-to("md") {
-        $padding-x: 60px;
-        $gutter: 20px;
-        $total-cols: 3;
         padding: 20px $padding-x;
     }
 }
@@ -88,5 +115,46 @@ export default {
 
 .profile {
     cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+
+    .menu {
+        background: $white1;
+        position: absolute;
+        padding: 40px 25px;
+        width: 100%;
+        box-sizing: border-box;
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            &__link {
+                cursor: pointer;
+                outline: none;
+                border: none;
+                background: transparent;
+                display: inline-block;
+                font-weight: 700;
+                line-height: 40px;
+                text-decoration: none;
+                color: $grey;
+                border-bottom: 1px solid $white2;
+
+                &:last-child {
+                    border: none;
+                }
+
+                &:hover {
+                    background: $white2;
+                }
+            }
+        }
+        
+        
+    }
 }
 </style>

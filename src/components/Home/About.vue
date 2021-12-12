@@ -1,10 +1,14 @@
 <template>
     <div class="wrapper">
         <div class="container">
-
+            <div class="card" v-for="(item, index) in cards" :key="item">
+                <h2 class="number">{{ index + 1 }}</h2>
+                <h4 class="title">{{ item.title }}</h4>
+                <p class="text">{{ item.text }}</p>
+            </div>
         </div>
+        <h2 class="title">Как работает сервис?</h2>
         <div class="container">
-            <h2 class="title">Как работает сервис?</h2>
             <div class="block">
                 <img src="../../assets/phone-img-2.png" alt="img" class="img">
                 <p class="text">1. Ты регистрируешь свое заведение или себя, мы создаем для тебя личный кабинет и Forta id.</p>
@@ -32,6 +36,24 @@
 <script>
 export default {
     name: "About",
+    data() {
+        return {
+            cards: [
+                {
+                    title: "Клиенту",
+                    text: "Клиенту не нужно устанавливать отдельное приложение, достаточно отсканировать QR-код или пройти по ссылке"
+                },
+                {
+                    title: "Бизнесу",
+                    text: "Можно увидеть все чаевые, которые получили сотрудники"
+                },
+                {
+                    title: "Всем",
+                    text: "Увеличение чаевых до 30%"
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -41,25 +63,45 @@ export default {
 
     @include respond-to("xs") {
         $padding-x: 6.5vw;
-        $gutter: 20px;
-        $total-cols: 3;
         padding: 30px $padding-x 212px;
     }
 
     @include respond-to("md") {
         $padding-x: 60px;
-        $gutter: 20px;
-        $total-cols: 3;
         padding: 30px $padding-x 212px;
     }
 }
 
+.card {
+    margin: 40px 0 0 0;
+    background: $white2;
+    width: 100%;
+    max-width: 325px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    .number {
+        margin: 0;
+        color: $purple2;
+        font-size: 96px;
+        line-height: 120px;
+        font-weight: 300;
+    }
+
+    .title {
+        margin: 10px 0 30px;
+    }
+}
+
 .title {
-    font-size: 32px;
+    margin: 80px 0 0 0;
+    font-size: 30px;
     line-height: 50px;
 }
 
 .block {
+    margin: 40px 0 0 0;
     width: 100%;
     max-width: 375px;
 
@@ -69,6 +111,7 @@ export default {
     }
 
     .text {
+        margin: 0;
         line-height: 30px;
         font-weight: 300;
     }

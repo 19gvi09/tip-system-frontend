@@ -13,7 +13,8 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-
+    text-align: left;
+    
     h1 {
         display: flex;
         justify-content: center;
@@ -26,17 +27,8 @@ export default {
     }
 
     @include respond-to("xs") {
-        $padding-x: 25px;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 30px $padding-x 36px;
-    }
-
-    @include respond-to("md") {
-        $padding-x: 30px;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 30px $padding-x 36px;
+        $padding-x: 6.5vw;
+        padding: 20px $padding-x 10px;
     }
 
     background: $radial;
