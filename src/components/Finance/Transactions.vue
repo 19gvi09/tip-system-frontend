@@ -118,11 +118,9 @@ export default {
     display: flex;
     align-items: center;
     padding: 15px 0;
-<<<<<<< HEAD
+
     justify-content: flex-start;
-=======
-    justify-content: start;
->>>>>>> 5f77c986d6a035e997430f2a8c2fa5a2c0d45fcd
+
     border-bottom: 1px solid #E6E6E6;
     &:last-child {
         margin: 0;

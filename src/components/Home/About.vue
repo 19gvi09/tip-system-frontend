@@ -1,14 +1,31 @@
 <template>
     <div class="wrapper">
-        <h2 class="title">Как работает сервис?</h2>
-        <img src="../../assets/phone-img-2.png" alt="img" class="img">
-        <p class="text">1. Ты регистрируешь свое заведение или себя, мы создаем для тебя личный кабинет и Forta id.</p>
-        <img src="../../assets/phone-img-3.png" alt="img" class="img">
-        <p class="text">2. Ты можешь создать столько QR-кодов, сколько захочешь. Можно создавать их только для себя или для всех сотрудников.</p>
-        <img src="../../assets/phone-img-4.png" alt="img" class="img">
-        <p class="text">3. Для того что бы получить чаевые или донаты, нужно просто показать любым способом QR код.</p>
-        <img src="../../assets/phone-img-5.png" alt="img" class="img">
-        <p class="text">4. Для того что бы получить чаевые или донаты, нужно просто показать любым способом QR код.</p>
+        <div class="container">
+
+        </div>
+        <div class="container">
+            <h2 class="title">Как работает сервис?</h2>
+            <div class="block">
+                <img src="../../assets/phone-img-2.png" alt="img" class="img">
+                <p class="text">1. Ты регистрируешь свое заведение или себя, мы создаем для тебя личный кабинет и Forta id.</p>
+            </div>
+            <div class="block">
+                <img src="../../assets/phone-img-3.png" alt="img" class="img">
+                <p class="text">2. Ты можешь создать столько QR-кодов, сколько захочешь. Можно создавать их только для себя или для всех сотрудников.</p>
+            </div>
+            <div class="block">
+                <img src="../../assets/phone-img-4.png" alt="img" class="img">
+                <p class="text">3. Для того что бы получить чаевые или донаты, нужно просто показать любым способом QR код.</p>
+            </div>
+            <div class="block">
+                <img src="../../assets/phone-img-5.png" alt="img" class="img">
+                <p class="text">4. Для того что бы получить чаевые или донаты, нужно просто показать любым способом QR код.</p>
+            </div>
+            <div class="block">
+                <img src="../../assets/phone-img-6.png" alt="img" class="img">
+                <p class="text">5.  В любой момент можно вывести деньги на самые популярные платежные системы. А можно расплачиваться нашим электронным кошельком.</p>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -42,30 +59,18 @@ export default {
     line-height: 50px;
 }
 
-.img {
+.block {
     width: 100%;
-    max-width: 376px;
-}
+    max-width: 375px;
 
-.text {
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 300;
-
-    &:nth-child(1) {
-        margin: 0 0 93px 0;
+    .img {
+        width: 100%;
+        max-width: 375px;
     }
 
-    &:nth-child(2) {
-        margin: 50px 0 63px 0;
-    }
-
-    &:nth-child(3) {
-        margin: 41px 0 39px 0;
-    }
-
-    &:nth-child(3) {
-        margin: 13px 0 0 0;
+    .text {
+        line-height: 30px;
+        font-weight: 300;
     }
 }
 </style>
