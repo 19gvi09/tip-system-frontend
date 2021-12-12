@@ -2,10 +2,10 @@
     <div class="wrapper">
         <h2 class="title">Контакты</h2>
         <div class="socials">
-            <a href="vk.com"><img src="../assets/vk-logo.svg" alt="vk" class="socials__link"></a>
-            <a href="linkedin.com/"><img src="../assets/linkedin-logo.svg" alt="In" class="socials__link"></a>
-            <a href="facebook.com"><img src="../assets/fb-logo.svg" alt="fb" class="socials__link"></a>
-            <a href="instagram.com"><img src="../assets/instagram-logo.svg" alt="inst" class="socials__link"></a>
+            <a href="https://www.vk.com" target="_blank"><img src="../assets/vk-logo.svg" alt="vk" class="socials__link"></a>
+            <a href="https://ru.linkedin.com" target="_blank"><img src="../assets/linkedin-logo.svg" alt="In" class="socials__link"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="../assets/fb-logo.svg" alt="fb" class="socials__link"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="../assets/instagram-logo.svg" alt="inst" class="socials__link"></a>
         </div>
         <a class="phone" href="tel:+74994907746">+7 (499) 490-77-46</a>
         <p class="text">Техподдержка</p>
@@ -59,6 +59,10 @@ export default {
     &__link {
         background: $purple2;
         border-radius: 50%;
+
+        &:active {
+            background: $purple_dark1;
+        }
     }
 }
 

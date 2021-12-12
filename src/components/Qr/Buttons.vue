@@ -1,23 +1,17 @@
 <template>
-<div class="qr_download">Скачать QR - код</div>
-<div class="or">или</div>
-<div class="wrapper">
-    <div class="block">
+    <div class="wrapper">
         <div class="row">
-            <button class="button purple">Скопировать ссылку</button>
+            <button class="button purple">
+                <div class="text">Сгенеррировать новый код</div>
+            </button>
+        </div>
+        <div class="block">
+            <div class="row">
+                <p>Зажми ненужный QR-код, чтобы удалить</p>
+
+            </div>
         </div>
     </div>
-</div>
-
-<div class="wrapper">
-    <div class="block">
-        <div class="row">
-            <a href="https://forta.tips/8641395">https://forta.tips/8641395</a>
-
-        </div>
-
-    </div>
-</div>
 </template>
 
 <script>
@@ -27,23 +21,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.or {
-    padding-bottom: 10px;
+.text {
+    padding-top: 6px;
+    padding-left: 21px;
 
-}
-
-.qr_download {
-    padding-bottom: 20px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #562CD3;
-    cursor: pointer;
 }
 
 .wrapper {
+    p {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+
     @include respond-to("xs") {
         $padding-x: 6.5vw;
         $gutter: 20px;
@@ -62,16 +52,15 @@ export default {
 .row {
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    a {
-        cursor: pointer;
-        text-decoration: none;
+    p {
         font-style: normal;
-        font-weight: bold;
+        font-weight: 300;
         font-size: 16px;
-        line-height: 19px;
+        line-height: 180%;
         text-align: center;
-        color: #333333;
+        color: #808080;
     }
 }
 
@@ -79,17 +68,24 @@ export default {
     outline: none;
     border: none;
     background: transparent;
+    margin-left: 0;
+    display: inline-block;
+    cursor: pointer;
 
     &.purple {
-        color: $white1;
-        background: $purple1;
-        box-shadow: $sh_purple;
-        padding: 9px 42px;
-        border-radius: 30px;
+        font-style: normal;
+        font-weight: 300;
         font-size: 16px;
-        font-weight: 700;
-        line-height: 22px;
-        cursor: pointer;
+        line-height: 150%;
+        background: #F9F9FC;
+        width: 325px;
+        height: 95px;
+        border-radius: 20px;
+        display: flex;
+        padding: 30px;
+        align-self: center;
+        justify-content: center;
+        margin-bottom: 0
     }
 
     &.text {

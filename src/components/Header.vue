@@ -5,10 +5,13 @@
                 <div class="logo__img" @click="this.$router.push('/')"></div>
                 <h1 class="logo__title" @click="this.$router.push('/')">Forta</h1>
             </div>
-            <div class="burger">
-                <div class="burger__line"></div>
-                <div class="burger__line"></div>
-                <div class="burger__line"></div>
+            <div class="row">
+                <div class="burger">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                </div>
+                <img class="profile" src="../assets/profile.svg" alt="">
             </div>
         </div>
     </div>
@@ -67,6 +70,7 @@ export default {
 }
 
 .burger {
+    margin: 0 20px 0 0;
     cursor: pointer;
 
     &__line {
@@ -80,5 +84,9 @@ export default {
             margin: 0;
         }
     }
+}
+
+.profile {
+    cursor: pointer;
 }
 </style>
