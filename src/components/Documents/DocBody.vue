@@ -1,17 +1,31 @@
 <template>
 <div class="wrapper">
     <div class="row">
-        <ul>
-            <li> <a href=""> Требования к сайту</a></li>
-            <li> <a href="">54-ФЗ</a></li>
-            <li> <a href="">Договор на прием карт</a></li>
-            <li> <a href="">Договор на фискализацию</a></li>
-            <li> <a href="">Договор конфиденциальности</a></li>
-            <li> <a href="">Политика конфиденциальности</a></li>
-            <li> <a href="">Реквизиты</a></li>
-            <li> <a href="">Как подключиться</a></li>
-            <li> <a href="">Условия пользования</a></li>
-        </ul>
+        Требования к сайту
+    </div>
+    <div class="row">
+        54-ФЗ
+    </div>
+    <div class="row">
+        Договор на прием карт
+    </div>
+    <div class="row">
+        Договор на фискализацию
+    </div>
+    <div class="row">
+        Договор конфиденциальности
+    </div>
+    <div class="row">
+        Политика конфиденциальности
+    </div>
+    <div class="row">
+        Реквизиты
+    </div>
+    <div class="row">
+        Как подключиться
+    </div>
+    <div class="row">
+        Условия пользования
     </div>
 </div>
 </template>
@@ -24,29 +38,20 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
+    padding: 0 40px;
+    padding-bottom: 100px;
+
+    .row:last-child {
+        border-bottom: none;
+    }
+
     .row {
         display: flex;
-        padding-bottom: 70px;
-        justify-content: center;
-        ul {
-            margin: 0;
-        }
-        li {
-            list-style-type: none;
-            text-align: left;
-            padding: 30px;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 19px;
-            cursor: pointer;
-            border-bottom: 1px solid $purple2;
-
-            a {
-                text-decoration: none;
-                color: #333333;
-            }
-        }
+        padding-bottom: 40px;
+        padding: 40px;
+        justify-content: left;
+        padding-bottom: 1px solid;
+        border-bottom: 1px solid $purple2;
     }
 
     @include respond-to("xs") {
@@ -60,6 +65,5 @@ export default {
         $gutter: 20px;
         $total-cols: 3;
     }
-
 }
 </style>
