@@ -26,21 +26,25 @@ export default {
 .wrapper {
     .row {
         display: flex;
-        padding-bottom: 60px;
-
+        padding-bottom: 70px;
         justify-content: center;
+        ul {
+            margin: 0;
+        }
         li {
             list-style-type: none;
             text-align: left;
-            margin-top: 40px;
+            padding: 30px;
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 19px;
             cursor: pointer;
+            border-bottom: 1px solid $purple2;
+
             a {
                 text-decoration: none;
-            color: #333333;
+                color: #333333;
             }
         }
     }

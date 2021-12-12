@@ -5,10 +5,8 @@
             <p>Финансовые операции</p>
         </div>
         <div class="row" v-for="item in history" :key="item.id">
-            <div class="row">
                 <img :src="require('../../assets/arrow-' + item.color + '.svg')" alt="arrow">
                 <p class="amount">{{ item.symbol + item.amount }} ₽</p>
-            </div>
             <p class="date"><span class="time">{{ item.time }}</span>{{ item.date }}</p>
         </div>
     </div>
@@ -119,26 +117,26 @@ export default {
 .row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 0 31px;
-
+    padding: 15px 0;
+    justify-content: start;
+    border-bottom: 1px solid #E6E6E6;
     &:last-child {
         margin: 0;
     }
 }
 
 .amount {
-    margin: 0 0 0 10px;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
+    padding: 0 10px;
 }
 
 .date {
     margin: 15px 0;
     font-size: 16px;
     font-weight: 400;
-
+    margin-left: 30%;
     .time {
         color: $grey2;
         margin: 0 7px 0 0;
