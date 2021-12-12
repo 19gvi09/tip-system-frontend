@@ -38,13 +38,23 @@ const routes = [
     {
         path: '/auth',
         name: 'Auth',
-        component: () => import(/* webpackChunkName: "code" */ '../views/Form.vue')
+        component: () => import(/* webpackChunkName: "auth" */ '../views/Form.vue')
     },
     {
         path: '/register/:type',
         name: 'Register',
-        component: () => import(/* webpackChunkName: "code" */ '../views/Form.vue')
+        component: () => import(/* webpackChunkName: "register" */ '../views/Form.vue')
     },
+    {
+        path: '/documents',
+        name: 'Documents',
+        component: () => import(/* webpackChunkName: "documents" */ '../views/Documents.vue')
+    },
+    {
+        path: '/our-products',
+        name: 'OurProducts',
+        component: () => import(/* webpackChunkName: "documents" */ '../views/OurProducts.vue')
+    }
 ]
 
 const router = createRouter({
