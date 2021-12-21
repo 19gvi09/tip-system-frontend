@@ -27,20 +27,8 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @include respond-to("xs") {
-        $padding-x: 6.5vw;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 50px $padding-x 10px;
-    }
-
-    @include respond-to("md") {
-        $padding-x: 60px;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 50px $padding-x 10px;
-    }
+    padding-top: 50px;
+    padding-bottom: 10px;
 }
 
 .title {

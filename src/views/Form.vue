@@ -173,9 +173,10 @@ export default {
 .tabs {
     display: flex;
     justify-content: space-between;
-    margin: 30px 0 0;
+    margin: 30px auto 0;
     font-weight: 400;
     width: 100%;
+    max-width: 330px;
 
     &__tab {
         margin: 0;

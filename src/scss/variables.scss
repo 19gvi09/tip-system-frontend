@@ -1,8 +1,9 @@
 /* Basic null variables */
-$padding-x: null;
+$padding: null;
 $gutter: null;
 $total-cols: null;
 $cols: null;
+$grid-width: null;
 
 /* Color variables */
 $purple1: #562CD3;
@@ -35,6 +36,10 @@ $sh_purple: -10px -10px 30px rgba(86, 44, 211, 0.05), 10px 10px 30px rgba(86, 44
 
 /* Breakpoints */
 $breakpoints: (
-    "xs": 375px,
-    "md": 1440px,
+    "xs": 0px,
+    "sm": 480px,
+    "md": 768px,
+    "lg": 1024px,
+    "xl": 1280px,
+    "xxl": 1440px,
 );

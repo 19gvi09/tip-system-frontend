@@ -18,10 +18,7 @@
 
 <script>
 export default {
-    name: 'Code',
-    props: {
-
-    }
+    name: 'Code'
 }
 </script>
 

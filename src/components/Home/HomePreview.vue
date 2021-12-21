@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper">
         <img class="img" src="../../assets/phone-img-1.png" alt="img">
-        <h2 class="title">Чаевые по QR-коду</h2>
+        <h2 class="title">Чаевые<br>по QR-коду</h2>
         <p class="text">Создать страницу для чаевых может кто угодно: сервис работает не только с бизнесом</p>
-        <button class="button">
+        <button class="button" @click="this.$router.push('/register/personal')">
             Зарегистрироваться
             <img src="../../assets/arrow-white.svg" alt="arrow">
         </button>
@@ -17,33 +17,41 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@include respond-to("xs") {
+
+}
+@include respond-to("sm") {
+    .button {
+        display: flex;
+        justify-content: center;
+    }
+}
+@include respond-to("md") {
+    
+}
+@include respond-to("lg") {
+
+}
+@include respond-to("xl") {
+
+}
+
 .wrapper {
     box-shadow: $sh_arrow;
     background: $radial;
     color: $white1;
-
-    @include respond-to("xs") {
-        $padding-x: 6.5vw;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 43px $padding-x 71px;
-    }
-
-    @include respond-to("md") {
-        $padding-x: 60px;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 43px $padding-x 71px;
-    }
+    padding-top: 40px;
+    padding-bottom: 60px;
 }
 
 .img {
+    margin: 0 0 0 auto;
     width: 100%;
     max-width: 181px;
 }
 
 .title {
-    margin: 30px 0 0 0;
+    margin: 0;
     font-size: 36px;
     line-height: 45px;
     text-align: left;
@@ -51,6 +59,7 @@ export default {
 
 .text {
     margin: 20px 0 0 0;
+    max-width: 630px;
     text-align: left;
     font-size: 18px;
     line-height: 25px;
@@ -59,18 +68,19 @@ export default {
 
 .button {
     margin: 35px 0 0 0;
-    display: flex;
+    padding: 14px 0;
     outline: none;
     border: none;
     background: $purple1;
     color: $white1;
     box-shadow: $sh_btn;
     border-radius: 30px;
-    padding: 14px 65px;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
     cursor: pointer;
+    width: 100%;
+    max-width: 325px;
 
     &:active {
         background: $purple_dark1;

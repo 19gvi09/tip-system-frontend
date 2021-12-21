@@ -1,10 +1,6 @@
 <template>
     <div>
         <Header />
-        <!-- <div id="nav">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/lk">LK</router-link>
-        </div> -->
         <router-view/>
         <Footer />
     </div>
@@ -31,5 +27,56 @@ export default {
   text-align: center;
   background: $purple3;
   font-size: 16px;
+}
+
+@include respond-to("xs") {
+    $padding: 25px;
+    $grid-width: 430px;
+    $total-cols: 3;
+
+    .wrapper {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}
+@include respond-to("sm") {
+    $padding: 30px;
+    $grid-width: 718px;
+    $total-cols: 3;
+    
+    .wrapper {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}
+@include respond-to("md") {
+    $padding: 40px;
+    $grid-width: 974px;
+    $total-cols: 3;
+    
+    .wrapper {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}
+@include respond-to("lg") {
+    $padding: 50px;
+    $grid-width: 1230px;
+    $total-cols: 3;
+    
+    .wrapper {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}
+@include respond-to("xl") {
+    $padding: 60px;
+    $grid-width: 1390px;
+    $total-cols: 3;
+
+    .wrapper {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
 }
 </style>

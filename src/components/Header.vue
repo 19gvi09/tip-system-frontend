@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="logo">
                     <div class="logo__img" @click="this.$router.push('/')"></div>
-                    <h1 class="logo__title" @click="this.$router.push('/')">Forta</h1>
+                    <h1 class="logo__title" @click="this.$router.push('/')">Chad</h1>
                 </div>
                 <div class="row">
                     <div class="burger" @click="Menu">
@@ -22,7 +22,7 @@
                     <router-link class="links__link" to="/documents">Документация</router-link>
                     <router-link class="links__link" to="/products">Наши продукты</router-link>
                     <router-link class="links__link" to="/faq">FAQ</router-link>
-                    <router-link class="links__link" to="/documents">Служба поддержки</router-link>
+                    <router-link class="links__link" to="/support">Служба поддержки</router-link>
                 </div>
             </div>
         </div>
@@ -63,11 +63,8 @@ export default {
 .wrapper {
     box-shadow: $sh_light;
     background: $white1;
-
-    @include respond-to("xs") {
-        $padding-x: 6.5vw;
-        padding: 20px $padding-x;
-    }
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .row {
@@ -93,6 +90,7 @@ export default {
         font-size: 28px;
         line-height: 30px;
         cursor: pointer;
+        text-transform: uppercase;
     }
 }
 
@@ -130,7 +128,6 @@ export default {
         .links {
             display: flex;
             flex-direction: column;
-            text-align: left;
 
             &__link {
                 cursor: pointer;
@@ -143,6 +140,7 @@ export default {
                 text-decoration: none;
                 color: $grey;
                 border-bottom: 1px solid $white2;
+                text-align: left;
 
                 &:last-child {
                     border: none;
@@ -153,8 +151,6 @@ export default {
                 }
             }
         }
-        
-        
     }
 }
 </style>

@@ -18,22 +18,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
-    @include respond-to("xs") {
-        $padding-x: 6.5vw;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 0 $padding-x;
-    }
-
-    @include respond-to("md") {
-        $padding-x: 30px;
-        $gutter: 20px;
-        $total-cols: 3;
-        padding: 0 $padding-x;
-    }
-}
-
 .row {
     display: flex;
     justify-content: center;

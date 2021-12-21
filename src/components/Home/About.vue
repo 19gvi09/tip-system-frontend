@@ -30,6 +30,7 @@
                 <p class="text">5.  В любой момент можно вывести деньги на самые популярные платежные системы. А можно расплачиваться нашим электронным кошельком.</p>
             </div>
         </div>
+        <button class="button purple">Попробовать</button>
     </div>
 </template>
 
@@ -58,18 +59,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@include respond-to("xs") {
+
+}
+@include respond-to("sm") {
+    .button {
+        display: flex;
+        justify-content: center;
+    }
+}
+@include respond-to("md") {
+        
+}
+@include respond-to("lg") {
+    
+}
+@include respond-to("xl") {
+    
+}
+
 .wrapper {
     color: $grey;
+}
 
-    @include respond-to("xs") {
-        $padding-x: 6.5vw;
-        padding: 30px $padding-x 212px;
-    }
-
-    @include respond-to("md") {
-        $padding-x: 60px;
-        padding: 30px $padding-x 212px;
-    }
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -114,6 +130,25 @@ export default {
         margin: 0;
         line-height: 30px;
         font-weight: 300;
+    }
+}
+
+.button {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 80px 0;
+
+    &.purple {
+        color: $white1;
+        background: $purple1;
+        box-shadow: $sh_purple;
+        padding: 19px 106px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
     }
 }
 </style>

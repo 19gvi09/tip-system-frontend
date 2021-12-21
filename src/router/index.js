@@ -16,9 +16,9 @@ const routes = [
         component: () => import(/* webpackChunkName: "lk" */ '../views/LK.vue')
     },
     {
-        path: '/finance',
-        name: 'Finance',
-        component: () => import(/* webpackChunkName: "finance" */ '../views/Finance.vue')
+        path: '/lk/history',
+        name: 'History',
+        component: () => import(/* webpackChunkName: "finance" */ '../views/History.vue')
     },
     {
         path: '/faq',
@@ -48,13 +48,61 @@ const routes = [
     {
         path: '/documents',
         name: 'Documents',
-        component: () => import(/* webpackChunkName: "documents" */ '../views/Documents.vue')
+        component: () => import(/* webpackChunkName: "documents" */ '../views/Links.vue'),
+        props: {
+            name: "Документация",
+            links: [
+                {
+                    name: "Требования к сайту"
+                },
+                {
+                    name: "54-ФЗ"
+                },
+                {
+                    name: "Договор на прием карт"
+                },
+                {
+                    name: "Договор на фискализацию"
+                },
+                {
+                    name: "Договор конфиденциальности"
+                },
+                {
+                    name: "Политика конфиденциальности"
+                },
+                {
+                    name: "Реквизиты"
+                },
+                {
+                    name: "Как подключиться"
+                },
+                {
+                    name: "Условия пользования"
+                },
+            ]
+        }
     },
     {
         path: '/products',
-        name: 'OurProducts',
-        component: () => import(/* webpackChunkName: "products" */ '../views/OurProducts.vue')
-    }
+        name: 'Products',
+        component: () => import(/* webpackChunkName: "products" */ '../views/Links.vue'),
+        props: {
+            name: "Наши продукты",
+            links: [
+                {
+                    name: "Торговый эквайринг"
+                },
+                {
+                    name: "Интернет-эквайринг"
+                },
+            ]
+        }
+    },
+    {
+        path: '/support',
+        name: 'Support',
+        component: () => import(/* webpackChunkName: "support" */ '../views/Support.vue')
+    },
 ]
 
 const router = createRouter({
